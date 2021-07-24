@@ -3,6 +3,12 @@ import getPriceFeed from './index.js'
 
 const app = express()
 
+app.use(function(req, res, next) {
+    
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+    next();
+});
+
 app.get('/', async(req, res) => {
     try{
 
@@ -21,6 +27,6 @@ app.get('/', async(req, res) => {
     }
 })
 
-app.listen('3000', () => {
-    console.log('runing in port 3000')
+app.listen('5000', () => {
+    console.log('runing in port 5000')
 })

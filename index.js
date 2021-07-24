@@ -48,7 +48,7 @@ const getPriceFeed = async() =>{
                     let info = $(elementChild).text()
                     //Esto es una forma de adaptar info fea para que se vea bien en el obj
                     if(keyindex == 1 || keyindex == 6){
-                        console.log($(elementChild).text())
+                        // console.log($(elementChild).text())
                         info = ($('p:first-child', $(elementChild).html()).text())
                     }
                     //en caso que no tenga un espacio en blanco
@@ -71,7 +71,7 @@ const getPriceFeed = async() =>{
         })
 
         //console.log
-        console.log(coinArr)
+    
         return coinArr
     }catch(error){
         console.log(error)
